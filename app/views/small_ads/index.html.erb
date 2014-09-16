@@ -1,0 +1,29 @@
+<h1>Listing small_ads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @small_ads.each do |small_ad| %>
+      <tr>
+        <td><%= small_ad.name %></td>
+        <td><%= small_ad.category_id %></td>
+        <td><%= small_ad.price %></td>
+        <td><%= link_to 'Show', small_ad %></td>
+        <td><%= link_to 'Edit', edit_small_ad_path(small_ad) %></td>
+        <td><%= link_to 'Destroy', small_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Small ad', new_small_ad_path %>

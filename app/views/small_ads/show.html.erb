@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @small_ad.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @small_ad.category_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @small_ad.price %>
+</p>
+
+<%= link_to 'Edit', edit_small_ad_path(@small_ad) %> |
+<%= link_to 'Back', small_ads_path %>
